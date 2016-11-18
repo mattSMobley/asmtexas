@@ -1,0 +1,101 @@
+<!-- <div class="apt-container"> -->
+  <center>
+<br><br><br><br>
+  <div class="cd-color-gray">
+  <h1 class="apt-name">
+    Prairie Ridge Apartments
+  </h1>
+  <div class="slideshow">
+    <div class="bss-slides" tabindex="1" autofocus="autofocus">
+      <figure>
+        <img src="img/Prairie Ridge - 1.jpg" width="100%" />
+        <figcaption>Prairie Ridge Entrance</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Prairie Ridge - 2.jpg" width="100%" />
+        <figcaption>Prairie Ridge Apartments</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Prairie Ridge - 3.jpg" width="100%" />
+        <figcaption>Prairie Ridge Apartments</figcaption>
+      </figure>
+
+    </div>
+    <!-- // bss-slides -->
+  </div>
+</div>
+
+
+<br><br><br><br>
+<div class="cd-color-yellow">
+<h1> Location </h1>
+<div class="row">
+  <div class="column-2">
+  </div>
+  <div class="column-5">
+    <ng-map zoom="12" default-style="false" center="[32.712475,-97.0118937]">
+      <marker position="[32.712475,-97.0118937]" />
+      <control name="overviewMap" opened="true" />
+    </ng-map>
+  </div>
+  <div class="column-4 apt-info">
+    <p>313 Freetown Road</p>
+    <p>Grand Prairie, Texas 75051</p>
+    <p>Phone: (972) 642-1213</p>
+    <p>Fax: 642-4958</p>
+  </div>
+  <div class="column-1">
+  </div>
+</div>
+</div>
+
+<br><br><br><br>
+<div class="cd-color-purple">
+<h1> Floorplans </h1>
+<div class="floorplans">
+  <!-- <div class="row">
+    <img src="img/floorplans/Prairie Ridge - 1.jpg">
+    <br>
+    <p><b>1 Bedroom / 1 Bathroom</b> - 603 sq ft.</p>
+  </div>
+  <div class="row">
+    <img src="img/floorplans/Prairie Ridge - 2.jpg">
+    <br>
+    <p><b>2 Bedroom / 1 Bathroom</b> - 796 sq ft.</p>
+  </div>
+  <div class="row">
+    <img src="img/floorplans/Prairie Ridge - 3.jpg">
+    <br>
+    <p><b>3 Bedroom / 1 Bathroom</b> - 938 sq ft.</p>
+  </div> -->
+  <div class="row">
+    <ul class="pgwSlider">
+      <li>
+        <img src="img/floorplans/Prairie Ridge - 1.jpg" alt="1 Bedroom/1 Bathroom (603 sq ft.)">
+      </li>
+      <li>
+        <img src="img/floorplans/Prairie Ridge - 2.jpg" alt="2 Bedroom/1 Bathroom (796 sq ft.)">
+      </li>
+      <li>
+        <img src="img/floorplans/Prairie Ridge - 3.jpg" alt="3 Bedroom/1 Bathroom (938 sq ft.)">
+      </li>
+    </ul>
+  </div>
+
+</div>
+</div>
+
+<!-- </div> -->
+<script>
+var opts = {
+  auto: {
+    speed: 3500,
+    pauseOnHover: true
+  }
+};
+makeBSS('.bss-slides', opts);
+
+$(document).ready(function() {
+  $('.pgwSlider').pgwSlider();
+});
+</script>

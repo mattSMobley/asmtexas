@@ -1,0 +1,80 @@
+<center>
+<br><br><br><br>
+  <div class="cd-color-gray">
+  <h1 class="apt-name">
+    Winfield Estates
+  </h1>
+  <div class="slideshow">
+    <div class="bss-slides" tabindex="1" autofocus="autofocus">
+      <figure>
+        <img src="img/Winfield Estates - 1.jpg" width="100%" />
+        <figcaption>Winfield Estates</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Winfield Estates - 2.jpg" width="100%" />
+        <figcaption>Winfield Estates Entrance</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Winfield Estates - 3.jpg" width="100%" />
+        <figcaption>Winfield Estates Office</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Winfield Estates - 4.jpg" width="100%" />
+        <figcaption>Winfield Estates Office</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Winfield Estates - 5.jpg" width="100%" />
+        <figcaption>Winfield Estates Office</figcaption>
+      </figure>
+    </div>
+    <!-- // bss-slides -->
+  </div>
+</div>
+
+
+<br><br><br><br>
+<div class="cd-color-yellow">
+<h1> Location </h1>
+<div class="row">
+  <div class="column-2">
+  </div>
+  <div class="column-5">
+    <ng-map zoom="12" default-style="false" center="[33.3975841,-94.0915925]">
+      <marker position="[33.3975841,-94.0915925]" />
+      <control name="overviewMap" opened="true" />
+    </ng-map>
+  </div>
+  <div class="column-4 apt-info">
+    <p>3535 South Lake Drive</p>
+    <p>Texarkana, Texas 75501</p>
+    <p>Phone: (903) 792-1062</p>
+    <p>Fax: (903) 792-2292</p>
+  </div>
+  <div class="column-1">
+  </div>
+</div>
+</div>
+
+<br><br><br><br>
+<div class="cd-color-purple">
+<h1> Floorplans </h1>
+<div class="floorplans">
+  <div class="row">
+    <img src="img/floorplans/Winfield Estates - 1.jpg">
+    <br>
+    <p><b>1 Bedroom / 1 Bathroom</b></p>
+  </div>
+
+</div>
+</div>
+
+
+<script>
+var opts = {
+  auto: {
+    speed: 3500,
+    pauseOnHover: true
+  }
+};
+makeBSS('.bss-slides', opts);
+</script>

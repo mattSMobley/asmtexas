@@ -1,0 +1,517 @@
+@charset "utf-8";
+
+body, html {
+	/*height:100%;*/
+	margin:0px;
+	padding:0px;
+	}
+
+html {
+	overflow-y:scroll;
+	height:100% !important;
+	background:#3f3933;
+	margin-bottom:1px;
+	}
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+	min-height:80% !important;
+	width:960px;
+	margin:5% auto;
+	overflow-y:hidden; /* SOLVED THE BODY NOT CONTAINING THE CONTENT!!! and later... SOLVED FOR IT NOT CONTAINING THE FOOTER!! */
+	scroll:no;
+	color: #000000;
+}
+
+#b_wrapper {
+	position:relative;
+	float:left;
+	height:100% !important;
+	min-height:600px !important;
+	/*margin-left:150px;
+	margin-right:auto;*/
+	margin-left:15%;
+	margin-right:15%;
+	padding-top:3%;
+	}
+
+/*
+ *
+ Header and Footer
+ *
+ */
+
+header {
+	height:70px;
+	float:left;
+	width:100%;
+}
+
+
+#h_left {
+	float:left;
+	width:60%;
+	height:100%;
+}
+
+#h_left a img {
+	border:none; /*Fix for I.E. incorporating a border to image links */
+}
+
+#h_right {
+	float:right;
+	width:40%;
+	height:100%;
+	text-align:right;
+}
+
+p.headerInfo {
+	display:inline-block;
+	font-family: Verdana, Arial, Helvetica, sans-serif !important;
+	font-weight:bold;
+	font-size:10px;
+	text-align:center;
+	margin-top:7px;
+	margin-left:10%;
+
+}
+
+footer {
+	float:left;
+	/*width:706px; I can't remember why I made it 706... */
+	width:650px;
+	height:90px;
+	margin:0px;
+	background:#FFFFFF;
+	border-top:1px solid #000000;
+	/*border:1px solid #000000;*/
+}
+
+/*#FLinfo {
+	float:left;
+	display:inline-block;
+	width:50%;
+	margin:15px auto; /* 10px */
+/*	text-align:center;*/
+	/*background-color:yellow;*/
+/*}*/
+
+
+#f_info {
+	display:inline-block;
+	width:100%;
+	margin:20px auto 0px;
+	vertical-align:middle;
+	text-align:center;
+	
+	/*background-color:yellow;*/
+}
+
+p.footerinfo {
+	display:inline-block;
+	font-size:18px;
+	/*font-weight:bold;*/
+	text-shadow:4px 4px 2px #888888;
+	text-align:center;
+}
+
+/*
+ *
+ * Navigation
+ *
+ * */ 
+
+/*
+nav {
+	width:700px;
+	margin:10px auto 0px auto;
+	padding: 3px;
+	text-align:center;
+	background:#A9A9A9;
+	border:1px solid #000000;
+}
+
+nav ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+nav ul li {
+	display:inline;
+}
+
+nav ul a:link,nav ul a:visited {
+	display:inline-block;
+	font-weight:bold;
+	color:#191970;
+	padding:10px 10px 4px 10px;
+	font-size:13px;
+	text-decoration:none;
+	text-transform:uppercase;
+	*//*changes start here */
+	/*float:left;
+	width:auto; */
+	/* border-right:1px solid #42432d; */
+/*	text-shadow: 2px 2px 2px #555;
+}
+
+nav ul a:hover,nav ul a:active nav ul a:focus{
+	text-decoration:underline;
+}
+*/
+
+/*
+ *
+ * Content
+ *
+ * */
+
+#content {
+	background:#A9A9A9;
+	border:1px solid #000000;
+	width: 650px;
+	/*min-height:365px;*/
+	margin: 10px auto 20px auto;
+	overflow:hidden;
+}
+
+#IMG_content {
+	background:purple;
+	border:1px solid #000000;
+	width: 650px;
+	height:365px;
+	margin: 10px auto 20px auto;
+	overflow:hidden;
+}
+
+/*#Properties_content {
+	background:#A9A9A9;
+	border:1px solid #000000;
+	width: 650px;
+	min-height:365px;
+	margin: 10px auto 20px auto;
+	overflow:hidden;
+} */
+
+#webmail {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:20px;
+	height:20px;
+}
+
+#webmail img {
+	width:100%;
+	height:100%;
+	border:none; /*takes the border away from IE img links */
+}
+
+/*To temp fix the positioning of the addresses change .properties "position" to "float:left"
+  and also change .address "position" to "float:left" */
+.properties {
+	/*position:relative;*/
+	float:left;
+	clear:left;
+	/*height:92px;*/ /* fixes the overflowing problem */
+	width:100%;
+	margin:4px;
+	padding-top:10px;
+	border-top:1px solid #000000;
+}
+
+.property {
+	/*position:relative;*/
+	float:left;
+	clear:left;
+	/*height:92px;*/ /* fixes the overflowing problem */
+	width:100%;
+	margin:4px;
+	padding-top:10px;
+}
+
+.address {
+	/*position:relative;*/
+	float:left;
+	width:65%;
+}
+
+.phone_fax {
+	float:right;
+	clear:right;
+	width:35%;
+	text-align:center;
+}
+
+/*
+ *
+ * Text styles
+ *
+ * */
+
+@font-face {
+	font-family: baskerville;
+	src: url('../fonts/baskvl.ttf');
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+}
+
+h1 {
+	font-size:16;
+	color:#9ACD32;
+}
+
+h2 {
+	font-family:baskerville;
+	font-size:2em;
+	color:#9ACD32;
+	margin-bottom:5px;
+}
+
+h3 {
+	font-size:12;
+	font-style:bold;
+	color:#663366;
+	padding-bottom:0px;
+	margin-bottom:0px;
+}
+
+h4 {
+	font-family:baskerville;
+	font-size:1.6em;
+	margin-bottom: 8px;
+}
+
+h5 {
+	font-family:baskerville;
+	font-size:2em;
+	color:#2D1563;
+	margin-bottom:5px;
+}
+
+p{
+	font-family:baskerville;
+	font-size:1.5em;
+	padding-top:0px;
+}
+
+.property p {
+	padding-left:0px;
+}
+
+
+/*
+ *
+ Images
+ *
+ */
+ 
+a.imgNUL {
+	text-decoration:none;
+	color:none;
+}
+/* Thank you Stu Nicholls for the wonderful html and css code used in creating this simple image gallery on AmeriSouth.com!!
+*/
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.stunicholls.com/menu/photo_click.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+
+#gallery {width:600px; height:360px; position:relative; border:1px solid #ddd; background:#F8F8F8; margin:20px; display:block;} /* background was f8f8f8 */
+#gallery ul {list-style:none; padding:5px; margin:1px; width:65px; float:right; height:340px; overflow-y:auto;}
+#gallery ul li {display:inline; width:50px; height:50px; float:left; margin:0 4px 4px 0; border:1px solid #444; cursor:pointer;}
+#gallery ul li img {display:block; width:50px; height:50px;}
+#gallery ul li span {display:none; position:absolute; left:370px; top:235px; width:200px;font-family:verdana, arial, sans-serif; color:#06a; font-size:11px; line-height:15px; text-align:justify;}
+#gallery ul li span b {color:#444;}
+
+/* required for IE5.x and IE6 to display the start image size correctly */
+#gallery ul li.click i img.default {margin:10px auto 0 auto; width:95%; height:95%; border:1px solid #fff;}
+
+#gallery ul li.off {display:none;}
+
+#gallery ul li.click {border-color:#fc0; background:#f8f8f8; cursor:default;}
+
+#gallery ul li.click i {position:absolute; left:0; top:0; width:540px; height:358px;}
+
+#gallery ul li.click i img {margin:20px auto 0 auto; width:95%; height:90%; border:1px solid #fff;}
+
+#gallery ul li.click span {display:block;}
+
+/*Gallery 2 (for Floor Plans) */
+
+#gallery2 {width:600px; height:360px; position:relative; border:1px solid #ddd; background:#F8F8F8; margin:20px;} /* background was f8f8f8 */
+#gallery2 ul {list-style:none; padding:5px; margin:1px; width:180px; float:right; height:200px; overflow-y:auto;}
+#gallery2 ul li {display:inline; width:50px; height:50px; float:left; margin:0 4px 4px 0; border:1px solid #444; cursor:pointer;}
+#gallery2 ul li img {display:block; width:50px; height:50px;}
+#gallery2 ul li span {display:none; position:absolute; left:400px; top:235px; width:200px;font-family:verdana, arial, sans-serif; color:#06a; font-size:11px; line-height:15px; text-align:justify;}
+#gallery2 ul li span b {color:#444;}
+
+/* required for IE5.x and IE6 to display the start image size correctly */
+#gallery2 ul li.click i img.default {margin:10px auto 0 auto; width:95%; height:95%; border:1px solid #fff;}
+
+#gallery2 ul li.off {display:none;}
+
+#gallery2 ul li.click {border-color:#fc0; background:#f8f8f8; cursor:default;}
+
+#gallery2 ul li.click i {position:absolute; left:0; top:0; width:400px; height:358px;}
+
+#gallery2 ul li.click i img {margin:20px auto 0 auto; width:95%; height:90%; border:1px solid #fff;}
+
+#gallery2 ul li.click span {display:block;}
+
+/*Gallery 3 (for apartment features) */
+
+#gallery3 {width:600px; height:360px; position:relative; border:1px solid #ddd; background:#F8F8F8; margin:20px;} /* background was f8f8f8 */
+#gallery3 ul {list-style:none; padding:5px; margin:1px; width:0px; float:right; height:0px; overflow-y:auto;}
+#gallery3 ul li {display:inline; width:50px; height:50px; float:left; margin:0 4px 4px 0; border:1px solid #444; cursor:pointer;}
+#gallery3 ul li img {display:block; width:50px; height:50px;}
+#gallery3 ul li span {display:none; position:absolute; left:400px; top:235px; width:200px;font-family:verdana, arial, sans-serif; color:#06a; font-size:11px; line-height:15px; text-align:justify;}
+
+#gallery3 ul li span b {color:#444;}
+
+/* required for IE5.x and IE6 to display the start image size correctly */
+#gallery3 ul li.click i img.default {margin:10px auto 0 auto; width:95%; height:95%; border:1px solid #fff;}
+
+#gallery3 ul li.off {display:none;}
+
+#gallery3 ul li.click {border-color:#fc0; background:#f8f8f8; cursor:default;}
+
+#gallery3 ul li.click i {position:absolute; left:0; top:0; width:600px; height:360px;}
+
+#gallery3 ul li.click i img {margin:20px auto 0 auto; width:95%; height:90%; border:1px solid #fff;}
+
+#gallery3 ul li.click span {display:block;}
+
+/*Gallery 4 (for nearby locations) */
+
+#gallery4 {width:600px; height:360px; position:relative; border:1px solid #ddd; background:#F8F8F8; margin:20px;} /* background was f8f8f8 */
+#gallery4 ul {list-style:none; padding:5px; margin:1px; width:180px; float:right; height:200x; overflow-y:auto;}
+#gallery4 ul li {display:inline; width:50px; height:50px; float:left; margin:0 4px 4px 0; border:1px solid #444; cursor:pointer;}
+#gallery4 ul li img {display:block; width:50px; height:50px;}
+#gallery4 ul li span {display:none; position:absolute; left:400px; top:235px; width:200px;font-family:verdana, arial, sans-serif; color:#06a; font-size:11px; line-height:15px; text-align:justify;}
+
+#gallery4 ul li span b {color:#444;}
+
+/* required for IE5.x and IE6 to display the start image size correctly */
+#gallery4 ul li.click i img.default {margin:10px auto 0 auto; width:95%; height:95%; border:1px solid #fff;}
+
+#gallery4 ul li.off {display:none;}
+
+#gallery4 ul li.click {border-color:#fc0; background:#f8f8f8; cursor:default;}
+
+#gallery4 ul li.click i {position:absolute; left:0; top:0; width:400px; height:358px;}
+
+#gallery4 ul li.click i img {margin:20px auto 0 auto; width:95%; height:90%; border:1px solid #fff;}
+
+#gallery4 ul li.click span {display:block;}
+
+/*
+ *
+ * Gallery Tabs
+ *
+ * */
+ 
+ ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 32px; /*--Set height of tabs--*/
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    width: 100%;
+}
+ul.tabs li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+    line-height: 31px; /*--Vertically aligns the text within the tab--*/
+    border: 1px solid #999;
+    border-left: none;
+    margin-bottom: -1px; /*--Pull the list item down 1px--*/
+    overflow: hidden;
+    position: relative;
+    background: #e0e0e0;
+}
+ul.tabs li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 1.2em;
+    padding: 0 20px;
+    border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+    outline: none;
+}
+ul.tabs li a:hover {
+    background: #ccc;
+    cursor:pointer;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+    background: #fff;
+    border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+.tab_container {
+    border: 1px solid #999;
+    border-top: none;
+    overflow: hidden;
+    clear: both;
+    float: left; width: 100%;
+    background: #fff;
+}
+.tab_content {
+    padding: 0px;
+    font-size: 1.2em;
+}
+
+/*
+ *
+ * Alignment
+ *
+ * */
+
+#pointer {
+	position:relative;
+	bottom:0;
+	left:0;
+}
+
+.center_block {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #000000;
+}
+
+.left {
+	text-align:left;
+	width:auto;
+}
+
+.right {
+	text-align:right;
+}
+
+.tab {
+	text-indent:40px;
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, footer, aside, nav, article, figure {
+	display: block;
+}
+
+/* End of page */
+

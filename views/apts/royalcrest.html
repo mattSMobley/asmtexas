@@ -1,0 +1,88 @@
+<center>
+<br><br><br><br>
+  <div class="cd-color-gray">
+  <h1 class="apt-name">
+    Royal Crest
+  </h1>
+  <div class="slideshow">
+    <div class="bss-slides" tabindex="1" autofocus="autofocus">
+      <figure>
+        <img src="img/Royal Crest - 1.jpg" width="100%" />
+        <figcaption>Royal Crest</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Royal Crest - 2.jpg" width="100%" />
+        <figcaption>Royal Crest Day Care</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Royal Crest - 3.jpg" width="100%" />
+        <figcaption>Royal Crest Entrance</figcaption>
+      </figure>
+      <figure>
+        <img src="img/Royal Crest - 4.jpg" width="100%" />
+        <figcaption>Royal Crest Day Care</figcaption>
+      </figure>
+
+    </div>
+    <!-- // bss-slides -->
+  </div>
+</div>
+
+
+<br><br><br><br>
+<div class="cd-color-yellow">
+<h1> Location </h1>
+<div class="row">
+  <div class="column-2">
+  </div>
+  <div class="column-5">
+    <ng-map zoom="12" default-style="false" center="[32.7175299,-96.7827407]">
+      <marker position="[32.7175299,-96.7827407]" />
+      <control name="overviewMap" opened="true" />
+    </ng-map>
+  </div>
+  <div class="column-4 apt-info">
+    <p>2719 E. Illinois Ave #100</p>
+    <p>Dallas, Texas 76105</p>
+    <p>Phone: (214) 374-3334</p>
+    <p>Fax: (214) 375-4596</p>
+  </div>
+  <div class="column-1">
+  </div>
+</div>
+</div>
+
+<br><br><br><br>
+<div class="cd-color-purple">
+<h1> Floorplans </h1>
+<div class="floorplans">
+  <div class="row">
+    <ul class="pgwSlider">
+      <li>
+        <img src="img/floorplans/Royal Crest - 1.jpg" alt="1 Bedroom/1 Bathroom (539 sq ft.)">
+      </li>
+      <li>
+        <img src="img/floorplans/Royal Crest - 2.jpg" alt="2 Bedroom/2 Bathroom (787 sq ft.)">
+      </li>
+      <li>
+        <img src="img/floorplans/Royal Crest - 3.jpg" alt="3 Bedroom/2 Bathroom (832 sq ft.)">
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+<script>
+var opts = {
+  auto: {
+    speed: 3500,
+    pauseOnHover: true
+  }
+};
+makeBSS('.bss-slides', opts);
+
+$(document).ready(function() {
+  $('.pgwSlider').pgwSlider();
+});
+</script>

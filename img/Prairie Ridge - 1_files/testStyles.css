@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+/*
+ *
+ Test Navigation
+ *
+ */
+
+#nav_test {
+	border:1px solid #ccc;
+	border-width:1px 0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+
+#nav_test li{
+	position:relative;
+	display:inline;
+}
+
+#nav_test a{
+	display:inline-block;
+	padding:10px;
+}
+
+#nav_test ul{
+	position:absolute;
+	/*top:100%; Uncommenting this makes the dropdowns work in IE7 but looks a little worse in all other browsers. Your call. */
+	left:-9999px;
+	margin:0;
+	padding:0;
+	text-align:left;
+}
+
+#nav_test ul li{
+	display:block;
+}
+
+#nav_test li:hover ul{
+	left:0;
+}
+
+#nav_test li:hover a{
+	text-decoration:underline;
+	background:#3333FF;
+}
+
+#nav_test li:hover ul a{
+	text-decoration:none;
+	background:#3333FF;
+}
+		
+#nav_test li:hover ul a:hover{
+	text-decoration:underline;
+	background:#3333FF;
+}
+
+#nav_test ul a{
+	white-space:nowrap;
+	display:block;
+	border-bottom:1px solid #ccc;
+	background:#3333FF;
+}
+
+/*
+ *
+ Test 2 Navigation
+ *
+ */
+ 
+#nt2 {
+	display:block;
+	float:left;
+	width:650px;
+	height:30px;
+	margin:0 auto;
+	padding-top:10px;
+	z-index:1001;
+}
+
+#nt2 ul {
+	font-family:Arial, Verdana;
+	font-size:15px;
+	font-weight:bold;
+	display:inline;
+	margin:0 auto;
+	text-align:center;
+	padding:0;
+	list-style:none;
+	z-index:1001;
+	
+}
+
+#nt2 li {
+	position:relative;
+	display:inline;
+	float:left;
+	text-align:center;
+	z-index:1001;
+}
+
+#nt2 a {
+	display:inline-block;
+	border-right:2px solid #F8F8F8;
+	z-index:1001;
+}
+
+#nt2 ul li {
+	display:inline; /* change back to "display:block" or display:inline-block*/
+	position:relative;
+	/*float:left;*/
+	z-index:1001;
+}
+
+#nt2 li ul {
+	display:none;
+	z-index:1001;
+	
+}
+
+#nt2 ul li a {
+	display:block;
+	text-decoration:none;
+	color:#2D1563;
+	padding:5px 29px;
+	background:rgb(63,57,51);
+	margin:0px auto;
+	white-space:nowrap;
+	z-index:1001;
+}
+
+#nt2 ul li a:hover {
+	background:#2D1563;
+	z-index:1001;
+}
+
+#nt2 li:hover ul {
+	display:block;
+	position:absolute;
+	z-index:1001;
+	color:#2D1563;
+}
+
+#nt2 li:hover li {
+	float:none;
+	font-size:12px;
+	/*border-top:1px solid #ffffff;*/ /*Why did I put this here?*/
+	z-index:1001;
+}
+
+#nt2 li:hover a {
+	/*color:#FFFFFF;*/
+	background:#B2C301;
+	z-index:1001;
+}
+
+#nt2 li:hover li a:hover {
+	color:#FFFFFF;
+	background:#2D1563;
+	z-index:1001;
+}
+
+/*
+ *
+ Test Content
+ *
+ */
+
+#content_test {
+	float:left;
+	width: 650px;
+	min-height:365px;
+	margin: 10px 0px 20px auto;
+	/*overflow:hidden;*/
+}
+
+#content_test a, #content_test a:visited {
+	text-decoration:none;
+	color:#4A4594;
+}
+
+#content_test a:hover {
+	text-decoration:underline;
+}
+
+/* End of page */
+
