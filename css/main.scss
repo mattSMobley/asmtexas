@@ -427,6 +427,7 @@ figcaption {
     margin-bottom: 10px;
     font-size: 1.1em;
     text-transform: uppercase;
+    text-align: center;
   }
   h1:after {
     border-bottom: 2px solid $accent;
@@ -457,6 +458,7 @@ figcaption {
   position: relative;
   top: -61px;
 }
+
 @media only screen and (max-width: 480px) {
   .fade-in h3 {
     font-size: 0.8em;
@@ -1097,9 +1099,15 @@ footer {
     }
   }
 }
+.box-2 {
+  padding-left: 55px;
+}
 @media only screen and (max-width: 1278px) {
   [class*='box-'] {
     max-width: 350px;
+  }
+  .box-2 {
+    padding-left: 0px;
   }
 }
 @media only screen and (max-width: 1188px) {
@@ -1116,10 +1124,16 @@ footer {
   .bss-slides figure img {
     height: 35em;
   }
+  .box-2 {
+    padding-left: 0px;
+  }
 }
 @media only screen and (max-width: 1038px) {
   [class*='box-'] {
     max-width: 400px;
+  }
+  .box-2 {
+    padding-left: 55px;
   }
   .filter-area {
     width: 65%;
@@ -1144,6 +1158,9 @@ footer {
     width: 60%;
     padding: 1em 2em;
   }
+  // .box-2 {
+  //   padding-left: 55px;
+  // }
   .bss-slides figure img {
     height: 30em;
   }
@@ -1151,6 +1168,9 @@ footer {
 @media only screen and (max-width: 804px) {
   [class*='box-'] {
     max-width: 300px;
+  }
+  .box-2 {
+    padding-left: 15px;
   }
   #sub-title {
     padding-left: 1%;
