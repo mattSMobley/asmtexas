@@ -4,8 +4,8 @@ angular.module("app")
       .when('/', {
         templateUrl: 'views/main.html'
       })
-      .when('/properties', {
-        templateUrl: 'views/properties.html'
+      .when('/our-properties', {
+        templateUrl: 'views/our-properties.html'
       })
       .when('/apts/goodhaven', {
         templateUrl: 'views/apts/goodhaven.html'
@@ -52,17 +52,14 @@ angular.module("app")
       .when('/services/property-management', {
         templateUrl: 'views/services/property-management.html'
       })
-      .when('/services/development', {
-        templateUrl: 'views/services/development.html'
+      .when('/services/what-we-do', {
+        templateUrl: 'views/services/what-we-do.html'
       })
-      .when('/services/uplifting-communities', {
-        templateUrl: 'views/services/uplifting-communities.html'
+      .when('/services/in-the-community', {
+        templateUrl: 'views/services/in-the-community.html'
       })
-      .when('/about/company-history', {
-        templateUrl: 'views/about/company-history.html'
-      })
-      .when('/about/executive-team', {
-        templateUrl: 'views/about/executive-team.html'
+      .when('/about/who-we-are', {
+        templateUrl: 'views/about/who-we-are.html'
       })
       .when('/about/in-the-news', {
         templateUrl: 'views/about/in-the-news.html'

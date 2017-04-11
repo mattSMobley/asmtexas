@@ -1,0 +1,93 @@
+<div class="container-properties">
+  <div class="padding-sides">
+  <br><br>
+  <br><br>
+  <div class="page-intro"><p> We currently manage {{ MC.properties.length }} properties across 6 different cities: Austin, Dallas, Grand Prairie, Fort Worth, Irving and Texarkana.</p>
+  </div>
+
+  <center>
+
+  <div class="filter-area">
+    <center>
+    <h3> FILTER PROPERTIES: </h3>
+
+    <div class="checkSorts"><p>
+      <input type="checkbox" ng-model="propertyTypes.pool" ng-true-value="'Yes'" ng-false-value="undefined">Pool On-Site</input>
+      <input type="checkbox" ng-model="propertyTypes.pets" ng-true-value="'Yes'" ng-false-value="undefined">Pets Allowed</input>
+      <input type="checkbox" ng-model="propertyTypes.laundry" ng-true-value="'Yes'" ng-false-value="undefined">Laundry On-Site</input>
+      <input type="checkbox" ng-model="propertyTypes.washer" ng-true-value="'Yes'" ng-false-value="undefined">W/D Hookups</input>
+      <input type="checkbox" ng-model="propertyTypes.electric" ng-true-value="'Yes'" ng-false-value="undefined">Electric Included</input>
+    </p>
+    </center>
+    </div>
+    </div>
+</center>
+<br>
+
+  <div class="column-12 properties-container"  ng-repeat="property in MC.properties | filter:propertyTypes">
+    <div class="column-3">
+      <div class="property-img">
+        <img ng-src="{{ property.img }}">
+      </div>
+    </div>
+    <div class="column-3">
+      <a ng-href="#/{{property.url}}">
+        <div class="row">
+          <div class="property-name">
+            <h1>{{ property.name }}</h1>
+          </div>
+        </div>
+      </a>
+      <div class="row">
+        <div class="property-address">
+          {{ property.address }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="property-city">
+          {{ property.city }}, {{ property.state }}
+        </div>
+      </div>
+    </div>
+    <div class="column-3 property-feature-container">
+      <div class="row">
+        <div class="property-feature">
+          Pool: {{ property.pool }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="property-feature">
+          Pets Allowed: {{ property.pets }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="property-feature">
+          W/D Hookups: {{ property.washer }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="property-feature">
+          Laundry on-site: {{ property.laundry }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="property-feature">
+          Electric Included: {{ property.electric }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="property-feature">
+          Number of Units: {{ property.apartments }}
+        </div>
+      </div>
+    </div>
+    <div class="column-3">
+      <ng-map class="property-map" zoom="11" default-style="false" center="{{ property.latlong }}">
+        <marker position="{{ property.latlong }}" />
+        <!-- <shape name="circle" radius="200" center="{{ property.latlong }}" radius="4000" /> -->
+        <control name="overviewMap" opened="true" />
+      </ng-map>
+    </div>
+  </div>
+</div>
+</div>

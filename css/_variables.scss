@@ -7,7 +7,8 @@ $grid-max-width: 100%;
 $breakpoint-mobile: "only screen and (min-width: 10em)";
 $breakpoint-small: "only screen and (min-width: 20em)";
 $breakpoint-medium: "only screen and (min-width: 30em)";
-$breakpoint-large: "only screen and (min-width: 50em)";
+$breakpoint-large: "only screen and (min-width: 40em)";
+$breakpoint-xlarge: "only screen and (min-width: 50em)";
 
 
 //color scheme
@@ -25,3 +26,4 @@ $font-cursive: 'Pinyon Script', cursive;
 //box-shadow
 $box-shadow-dark: 2px 2px 2px 2px $primary;
 $box-shadow-light: 1px 1px 10px 3px #888888;
+$box-shadow-medium: 1px 1px 10px 3px #666666;
