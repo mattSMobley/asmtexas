@@ -58,6 +58,9 @@ angular.module("app")
       .when('/services/in-the-community', {
         templateUrl: 'views/services/in-the-community.html'
       })
+      .when('/services/resident-portal', {
+        templateUrl: 'views/services/resident-portal.html'
+      })
       .when('/about/who-we-are', {
         templateUrl: 'views/about/who-we-are.html'
       })

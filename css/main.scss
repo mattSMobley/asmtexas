@@ -419,12 +419,14 @@ figcaption {
   margin-right: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 15px;
   width: 100%;
   min-height: 200px;
   max-width: 380px;
   text-align: center;
   margin-bottom: 20px;
   box-shadow: $box-shadow-light;
+  text-decoration: none;
   h1 {
     margin-bottom: 10px;
     font-size: 1.1em;
@@ -453,6 +455,7 @@ figcaption {
   -webkit-transition: all 250ms ease-in-out;
   color: lighten($accent, 40%);
   border: white 1px solid;
+  text-decoration: none;
 }
 .boxes-section {
   width: 100%;
