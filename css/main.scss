@@ -61,7 +61,7 @@ main {
   }
 }
 .cd-fixed-bg.cd-bg-1 {
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7)), url('../img/features/skyline-light.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7)), url('../img/features/background-sunset.jpg');
   background-position: right -200px 0px;
 }
 .news {
@@ -283,6 +283,14 @@ main {
     width: 50%;
     text-align: center;
   }
+  img {
+    margin: 2em;
+  }
+}
+
+.cd-container.cd-color-gray {
+  padding-left: 5em;
+  padding-right: 5em;
 }
 @media only screen and (max-width: 1037px) {
   .cd-container {
@@ -374,7 +382,8 @@ figcaption {
   background-color: rgba(255,255,255,0);
   text-decoration: none;
   nav ul {
-    margin-top: 0.8em;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
     a {
       color: $secondary;
       font-size: 1em;
@@ -382,6 +391,7 @@ figcaption {
   }
   .logo img {
     width: 80%;
+    padding-top: .5em;
   }
 }
 @media only screen and (max-width: 937px) {
@@ -562,6 +572,7 @@ nav {
     img {
       width: 150px;
       margin-top: -5px;
+      padding-top: 0em;
     }
   }
   .main_h {
@@ -659,12 +670,16 @@ nav ul li:hover {
 .hover-services:hover {
   text-decoration: underline;
 }
+.hover-about {
+  display: inline-block;
+  z-index: 1;
+}
 .hover-about:hover {
   text-decoration: underline;
 }
-.sub-menu-about {
-  display: none;
-}
+// .sub-menu-about {
+//   display: none;
+// }
 nav ul li:hover {
   text-decoration: none;
 }
@@ -672,9 +687,19 @@ nav ul li:hover {
   font-size: 1em;
   padding-left: 0.2em;
 }
+
+@media only screen and (max-width: 991px) {
+  nav {
+    margin-top: 0px;
+    ul li {
+      margin-left: 10px;
+      font-size: 0.9em;
+    }
+  }
+}
 @media only screen and (max-width: 938px) {
   nav {
-    margin-top: -5px;
+    margin-top: -10px;
     ul li {
       margin-left: 10px;
       font-size: 0.9em;
@@ -693,10 +718,16 @@ nav ul li:hover {
   -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
-@media only screen and (max-width: 766px) {
+
+@media only screen and (max-width: 791px) {
   .mobile-toggle {
     display: block;
+    padding-top: .25em;
   }
+  .initial nav ul {
+    display: none;
+  }
+
 }
 .mobile-toggle span {
   width: 30px;
@@ -1191,7 +1222,7 @@ footer {
     height: 27em;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 766px) {
   nav {
     padding: 0;
   }

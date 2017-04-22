@@ -47,22 +47,17 @@
         <nav>
           <ul>
             <li><a href="#/">Home</a></li>
-            <li><a href="#/our-properties">Properties</a></li>
-            <li class="hover-services">Services <i class="fa fa-caret-down" aria-hidden="true"></i>
-              <ul class="sub-menu-services">
-                <li><a href="#/services/property-management">Property Management</a></li>
-                <li><a href="#/services/what-we-do">What We Do</a></li>
-                <li><a href="#/services/in-the-community">In The Community</a></li>
-              </ul>
-            </li>
-            <li class="hover-about ">About <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <li class="hover-about ">About Us<i class="fa fa-caret-down" aria-hidden="true"></i>
               <ul class="sub-menu-about">
                 <li><a href="#/about/who-we-are">Who We Are</a></li>
+                <li><a href="#/services/what-we-do">What We Do</a></li>
+                <li><a href="#/services/in-the-community">In The Community</a></li>
                 <li><a href="#/about/in-the-news">In The News</a></li>
-                <li><a href="#/about/contact">Contact</a></li>
               </ul>
             </li>
-
+            <li><a href="#/our-properties">Communities</a></li>
+            <li><a href="#/services/resident-portal">Residents</a></li>
+            <li><a href="#/about/contact">Contact</a></li>
         </nav>
 
       </div>
@@ -114,6 +109,8 @@
 
   <script src="./js/app.js"></script>
   <script>
+  $('.sub-menu-about').hide();
+
     $(window).scroll(function() {
       if ($(window).scrollTop() > 200) {
         $('.main_h').addClass('sticky');
@@ -124,27 +121,14 @@
       }
     });
 
-    $('.hover-services').click(function(){
-      if ($('.sub-menu-about').css('display','inline')) {
-        $('.sub-menu-about').toggle();
-        $('.sub-menu-services').toggle('fast', function(){
-        });
-      }else {
-        $('.sub-menu-services').toggle('fast', function(){
-        });
-      }
+    $('.hover-about').mouseover(function () {
+      $('.sub-menu-about').show();
+      });
 
-    })
-    $('.hover-about').click(function(){
-      if ($('.sub-menu-services').css('display','inline')) {
-        $('.sub-menu-services').toggle();
-        $('.sub-menu-about').toggle('fast', function(){
-        });
-      }else {
-        $('.sub-menu-about').toggle('fast', function(){
-        });
-      }
-    })
+    $('nav ul').mouseleave(function () {
+      $('.sub-menu-about').hide();
+    });
+
     // mobile nav
     $('.mobile-toggle').click(function() {
       if ($('.main_h').hasClass('open-nav')) {
@@ -169,6 +153,7 @@
       }, 500);
       event.preventDefault();
     });
+
   </script>
 
   <script src="./js/controllers.js"></script>
