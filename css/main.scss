@@ -973,6 +973,13 @@ footer {
 .news-link:hover {
   color: lighten($secondary, 20%);
 }
+.news-story {
+  background-color: white;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  box-shadow: $box-shadow-dark;
+}
 .apt-info {
   padding-top: 2.5em;
   p {
