@@ -8,19 +8,15 @@
 
   <title>AmeriSouth Realty</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Gill+Sans|Pinyon+Script|Libre+Baskerville' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Molengo" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
   <link rel="stylesheet" href="./css/simple-slideshow-styles.css">
   <link rel="stylesheet" href="./css/pgwslider.css">
   <link rel="shortcut icon" href="./img/logo-fav2.jpg" type='image/x-icon' />
-  <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCd4yYuac4ot0nIp49HE9f_Sxy-tVKrD4I">
-  </script> -->
   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCd4yYuac4ot0nIp49HE9f_Sxy-tVKrD4I&sensor=false&extension=.js&libraries=places">
   </script>
   <script src="js/ng-map.min.js"></script>
@@ -127,6 +123,23 @@
 
     $('nav ul').mouseleave(function () {
       $('.sub-menu-about').hide();
+    });
+
+    //news article toggles
+    $('#videos-toggle').click(function() {
+      console.log('dookie');
+      if ($('#videos:hidden').length == 0) {
+        $('#videos').show();
+        $('#articles').hide();
+      };
+    });
+
+    $('#articles-toggle').click(function() {
+      console.log('dookie');
+      if ($('#articles:hidden').length == 0) {
+        $('#articles').show();
+        $('#videos').hide();
+      };
     });
 
     // mobile nav
